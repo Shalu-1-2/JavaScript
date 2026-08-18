@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // higher order function
+        
+        function order(cart, payment) {
+            console.log("order completed! wainting for payment", cart);
+            payment()
+            console.log("Done");
+        }
+
+        function payment() {
+            console.log("payment Done");
+        }
+
+        order("pen", payment)
+
+        //recursive  function
+
+
+        function demo(n) {
+            if (n == 0) {
+                return 0
+            }
+            return n + demo(n - 1)
+
+        }
+        console.log(demo(5));
+
+    </script>
+</body>
+
+</html>

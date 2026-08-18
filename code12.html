@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count how many are Even and how many are Odd.</title>
+</head>
+
+<body>
+    <script>
+        let arr = [10, 15, 20, 25, 30, 35, 40];
+
+        let even = 0;
+        let odd = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
+        }
+
+        console.log("Even numbers:", even);
+        console.log("Odd numbers:", odd);
+    </script>
+</body>
+
+</html>

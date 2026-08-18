@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(){
+            let a =6
+            let b =7
+            return a+b
+        }
+
+        console.log(add());
+
+        let fn = function(){
+            console.log("hello");
+        }
+        fn()
+
+        setInterval(()=>{
+            console.log("Hello");
+        },3000)
+
+        setTimeout(()=>{
+            console.log("Hello settimeOut");
+        },3000)
+
+        let fun = ()=>console.log("hello arrow function");
+
+        fun()
+        function demo(name="shalu"){
+            return alert(name)
+        }
+        demo("abhishek")
+
+
+        function followers(...a){
+            console.log(a);
+        }
+
+        followers("ved","nikhil","ram")
+      
+        function demo1(name,ved){
+            alert("Hello  "+name)
+            ved()
+        }
+
+        //here ved ek pramiter h jo ek function ke trh kaam krta h 
+
+        
+        function bye(){
+            alert("Good bye !")
+        }
+
+        function hello(){
+            alert("Hello")
+        }
+
+        demo1("shalu",bye)
+
+
+
+    </script>
+</body>
+</html>

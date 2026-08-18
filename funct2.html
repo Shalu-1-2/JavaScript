@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createGroup(groupName,...u){
+            console.log("Group created with name",groupName);
+            console.log("Group created with user ",u);
+
+        }
+
+        let name = prompt("Enter group name")
+        createGroup(name,"shalu","ved","shyam","dheeraj","Ram")
+
+        function demo(str,a)
+        {
+            let count = 0;
+            for(i=0;i<=str.length-1; i++){
+                if(str[i]==a){
+                count++
+                }
+            }
+                    console.log(count);
+
+        }
+    demo("vedPrakas",'a')
+    </script>
+</body>
+</html>

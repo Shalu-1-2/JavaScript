@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display only adults (18 years and above).</title>
+</head>
+<body>
+    <script>
+        let people = [
+    { name: "Shalu", age: 20 },
+    { name: "Aman", age: 15 },
+    { name: "Rahul", age: 25 },
+    { name: "Riya", age: 17 }
+];
+
+console.log("Adults:");
+
+for (let i = 0; i < people.length; i++) {
+
+    if (people[i].age >= 18) {
+        console.log(people[i].name + " - " + people[i].age);
+    }
+}
+    </script>
+</body>
+</html>

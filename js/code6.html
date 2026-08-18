@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+  
+  let correctemail = "shalu@gmail.com";
+  let correctpass ="1234";
+
+  let attempt =0;
+  let isLogin = false;
+
+  while(attempt<3 && isLogin==false){
+    let email = prompt("Enter email")
+    let password = prompt("Enter password")
+    attempt++
+    if(email==correctemail && password==correctpass){
+        alert("Login Successful")
+        isLogin = false
+    }else{
+        alert("Invailid email or password")
+    }
+  }
+  if(!isLogin){
+    alert("You have exceeded the maximum number of attempts")
+  }
+
+   </script> 
+</body>
+</html>

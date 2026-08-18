@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr =["shalu","yash","abhishek","shalini","komal"];
+
+    //    for(i=0;i<arr.length;i++){
+    //     console.log(arr[i]);
+    //    }
+
+    // easy and simple  then for loop 
+        for(item of arr){
+            console.log(item);
+        }
+
+        let obj = {
+            name:"shalu",
+            age:21,
+            email:"shalu@gmai.com"
+        }
+
+        for(key in obj){
+            console.log(key);
+            console.log(obj  [key]);
+        }
+
+        let products=[
+            {title:"pen",price:12},
+            {title:"Pencil",price:200},
+            {title:"Marker",price:2000},
+            {title:"Book",price:100},
+
+        ]
+
+        let a =products.forEach((item)=>(
+            console.log(item.title)
+        ))
+        console.log(a);
+
+        let b =products.map((item)=>item.title)
+        console.log(b); 
+
+        let final =products.filter((item)=>item.price>200)
+
+        console.log(final);
+
+        let arr1=[10,20,30,40,50,60];
+        let s =arr1.reduce((sum,currentValue)=> {
+            console.log("Sum",sum);
+            console.log("CurrentValue",currentValue);
+            return sum+currentValue;
+        },0);
+    </script>
+</body>
+</html>

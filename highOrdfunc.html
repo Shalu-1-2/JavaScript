@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function payment(amount,callback){
+            console.log(amount);
+         callback()
+        }
+
+        function sendMessage(){
+            console.log("Message sent");
+
+        }
+         function sendEmail(){
+            console.log("Email sent");
+            
+        }
+
+        function hello(){
+            console.log("Hello");
+        }
+
+        payment(200,sendMessage)
+        payment(300,sendMessage)
+        payment(500,sendEmail)
+        payment(3000,hello)
+
+    </script>
+</body>
+</html>

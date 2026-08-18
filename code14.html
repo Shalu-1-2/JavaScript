@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Given a shopping cart array (name, price, quantity), calculate the total bill amount. </title>
+</head>
+
+<body>
+    <script>
+        let cart = [
+            { name: "Pen", price: 20, quantity: 2 },
+            { name: "Book", price: 100, quantity: 3 },
+            { name: "Bag", price: 500, quantity: 1 }
+        ];
+
+        let totalBill = 0;
+
+        for (let i = 0; i < cart.length; i++) {
+
+            let itemTotal = cart[i].price * cart[i].quantity;
+            totalBill += itemTotal;
+        }
+
+        console.log("Total Bill =", totalBill);
+    </script>
+</body>
+
+</html>

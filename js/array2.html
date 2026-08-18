@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1 = ["ram","shaym"];
+        let arr2 = ["dhaniya","pyaz"]
+
+         let final =arr1.concat(arr2); // jodane ke liye 
+         console.log(final);
+
+         let a =arr1.includes("Ram") // value hai to true return hoga 
+         let b =arr1.includes("Rama") // agr value nhi hai to false dega 
+
+
+         console.log(a);
+         console.log(b);
+
+         let arr = [1,2,3,4,5,2,3,1,3];
+         console.log(arr);
+         arr.splice(1,2) //ye value ko hta deta hai starting se end point tk 
+         console.log(arr);
+         arr.splice(1,0,"shalu"); // yaha pr hum add bhi kr skte h 
+         console.log(arr)
+
+         let newarr = arr.slice(1,4) // ye starting point or end point ki value ko nikalkr deta h  
+         console.log(newarr);
+
+         let c =[1,7,3,5,6,4,7,4,7];
+
+         console.log(c);
+         c.splice(1,2);
+         console.log(c);
+
+         c.splice(4,0,"ved","shyam");
+         console.log(c);
+
+         let d =c.slice(2,3);
+         console.log(d);
+         console.log(c);
+
+         let name = ["shalu","komal","juli","rama","harsh","ayush"];
+
+         console.log(name);  
+         name.splice(2,2);
+         console.log(name);
+
+         name.splice(2,0,"radha","shyam");
+         console.log(name);
+
+         name.splice(2,5);
+         console.log(name);
+
+         let aa = arr.sort((a,b)=>a-b)
+        //  let ds = arr.sort((a,b)=>b-a)
+         console.log(aa);
+        //  console.log(ds);
+
+
+
+    </script>
+</body>
+</html>

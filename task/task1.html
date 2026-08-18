@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let student = [
+            {name:"shalu",marks:85},
+            {name:"komal",marks:60},
+            {name:"yash",marks:35},
+            {name:"kajal",marks:90}
+        ];
+
+        let total = student.length;
+
+        let sum =0;
+        let highest =student[0].marks;
+        let lowest = student[0].marks;
+        let pass =0;
+        let fail =0;
+
+        students.foreach(student => {
+            sum +=student.marks;
+            if(student.marks > highest){
+                highest = student.marks;
+            }
+            if(student.marks < lowest){
+                lowest = student.marks;
+            }
+            if(student.marks >=40){
+                pass++;
+            }
+            else{
+                fail++;
+            }
+        });
+
+        let averageMarks = totalMarks/totalstudents;
+    </script>
+</body>
+</html>

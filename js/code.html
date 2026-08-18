@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="alert ('hello')">Click me </button>
+    <p>Price: <del>500</del> <ins>400</ins></p>
+
+    <script>
+
+        //hoisting 
+        // var hoisting 
+
+        console.log(a);
+        var a = 7;
+
+        // let and const hoisting
+
+        //  console.log(c); upr  access krne pr temprary zone me chala jata hai 
+        let c = 5;
+        console.log(c);
+
+        var a = 10;
+        var a = 12;
+        c = 6;
+        console.log("A:-", a)
+        console.log("C :-", c)
+
+
+        let b = 10;
+        //   let b = 12; 
+        b = 15;
+        console.log("B:-", b);
+
+        const pi = 3.14;
+
+        //  const pi = 9;
+        console.log("PI:-", pi);
+
+        document.write("Hello")
+        document.write("<span>Hello</span>")
+        document.writeln("<span>Hello</span>")
+
+        // dialog boxes
+
+        // alert("Hello This is error")
+
+        // let conf = confirm("Do you want to do this ?")
+
+        // console.log(conf)
+
+        // let name = prompt("Enter your name ")
+
+        // console.log(name);
+
+        // console 
+
+        // console.log("Hello")
+        // console.info("Info")
+        // console.warn("Warn")
+        // console.error("Error")
+
+        var ab = 78;
+        var ba = "ved prakash";
+        var cb = true
+        var d;
+
+        console.log(typeof (ab))
+        console.log(typeof (ba))
+        console.log(typeof (cb))
+        console.log(typeof (d))
+
+        let obj = {
+            name: "shalu",
+            age: 21,
+            address: "jalaun"
+        }
+        let e = Symbol()
+
+        console.log(typeof (obj))
+        console.log(typeof (e))
+
+
+        let arr = [1, 2, 3, 4, 5, 6, 2];
+        console.log(typeof (arr));
+
+        let n = null;
+        console.log(typeof (null));
+
+
+        //operator
+        //     let num1 = Number(prompt("Enter a number = "))
+        //     let num2 = Number(prompt("Enter a number = "))
+
+        //    console.log(typeof(num1));
+        //    console.log(typeof(num2));
+
+        //     console.log(num1-num2);
+        //     console.log(num1*num2);
+        //     console.log(num1/num2);
+        //     console.log(num1%num2);
+        //     console.log(num1+num2);
+
+        let num1 = 9;
+        console.log(num1);
+
+        let num2 = 5;
+        //  num2 = num2+2;
+        num2 += 2;
+        console.log(num2);
+        let num3 = 7;
+        //  num3 = num3+2;
+        num3 -= 2;
+        console.log(num2);
+
+    </script>
+</body>
+
+</html>

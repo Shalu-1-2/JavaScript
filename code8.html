@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pass And fail</title>
+</head>
+<body>
+    <script>
+        let student = [
+            { name: "shalu", marks: 90 },
+            { name: "abhishek", marks: 95 },
+            { name: "yash", marks: 35 },
+        ];
+
+        student.forEach(student => {
+            if (student.marks >= 40)
+                console.log(student.name + "  Pass");
+            else
+                console.log(student.name + "  Fail");
+        });
+    </script>
+</body>
+
+</html>

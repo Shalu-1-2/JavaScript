@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>largest number in array</title>
+</head>
+<body>
+    <script>
+        let arr = [10,25,30,45,70];
+        let max = arr[0];
+        for(let i =1;i<arr.length;i++){
+            if(arr[i]>max){
+                max = arr[i];
+            }
+        }
+        console.log("Largest Number in array : ",max);
+    </script>
+</body>
+</html>

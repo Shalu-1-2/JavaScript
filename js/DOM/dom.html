@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="a">Hello coders !</h1>
+    <span class="e">span 1</span><br><br>
+    <span class="e">span 2</span><br> <br>
+    <span class="e">span 3</span><br> <br>
+    <span class="e">span 4</span><br> <br>
+
+    <b>this is new one 1</b> <br> <br>
+    <b>this is new one 2</b><br> <br>
+    <b>this is new one 3</b><br> <br>
+    <script>
+        // ID selector
+        let h = document.getElementById("a");
+
+        h.style.color = "blue";
+        h.style.fontSize = "50px";
+
+        console.log(h);
+
+
+        // Class selector
+        let e = document.getElementsByClassName("e");
+
+        console.log(e);
+        console.log(e[0]);  // first span
+
+
+        // Tag selector
+        let bold = document.getElementsByTagName("b");
+
+        console.log(bold);
+        console.log(bold[2]);  // third b
+
+
+        // Query selector
+        let qr = document.querySelector('b');
+        let qr1 = document.querySelectorAll('b');
+
+        console.log(qr);
+        console.log(qr1);
+
+
+    </script>
+</body>
+
+</html>
