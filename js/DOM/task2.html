@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Gallery Slider</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .gallery {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            position: relative;
+            background-color: bisque;
+            padding: 20px;
+        }
+
+        .gallery-container {
+            display: flex;
+            gap: 15px;
+            overflow: hidden;
+        }
+
+        .gallery-container img {
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            font-size: 22px;
+        }
+
+        .prev {
+            left: -20px;
+        }
+
+        .next {
+            right: -20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gallery">
+
+        <div class="gallery-container" id="gallery">
+
+        </div>
+
+        <button class="prev" id="prev">❮</button>
+
+        <button class="next" id="next">❯</button>
+
+    </div>
+
+
+    <script>
+
+        let images = [
+            "images/img1.jpg",
+            "images/img2.jpg",
+            "images/img3.jpg",
+            "images/img4.jpg",
+            "images/img1.jpg",
+            "images/img2.jpg",
+            "images/img3.jpg",
+            "images/img4.jpg"
+        ];
+
+
+        let gallery = document.getElementById("gallery");
+        console.log(gallery)
+
+        let prev = document.getElementById("prev");
+
+        let next = document.getElementById("next");
+
+        let index = 0;
+
+        gallery.setAttribute('src',images[index]);
+
+         images.forEach((img) => {
+            let imgEl = document.createElement("img");
+            imgEl.src = img;
+            gallery.appendChild(imgEl);
+            console.log(imgEl);
+        });
+
+        next.onclick = () => {
+    
+            index++;
+
+            if (index == images.length) {
+                index = 0;
+            }
+            gallery.setAttribute('src', images[index]);
+        };
+        prev.onclick = () => {
+            index--;
+            if (index < 0) {
+                index = images.length - 1;
+            }
+            gallery.setAttribute('src', images[index]);
+        };
+
+       
+
+    </script>
+
+</body>
+
+</html>

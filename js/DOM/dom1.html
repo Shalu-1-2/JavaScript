@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1 id="a"> Hello Coders</h1>
- <p class="b">
-        hello 
+    <p class="b">
+        hello
         <span style="display: none;">Ved</span>
         welcome
 
- </p>
+    </p>
 
- <p id="c">
-    hello
- </p>
+    <p id="c">
+        hello
+    </p>
 
     <ul>
         <li>JAVA</li>
@@ -27,9 +29,9 @@
 
 
     <script>
-        let a  = document.getElementById('a')
+        let a = document.getElementById('a')
         console.log(a.innerText);
-        console.log(a.innerText="ved");
+        console.log(a.innerText = "ved");
 
         let b = document.querySelector('.b')
         console.log(b.innerText);   // innerText document ke visible data ko hi get or set krta hai 
@@ -37,10 +39,11 @@
         console.log(b.textContent); // textContent visible or non visible data dono ko get or set krta hai 
 
         console.log(a.textContent);
-        console.log(a.textContent="shalu kushwaha");
+        console.log(a.textContent = "shalu kushwaha");
 
         let c = document.querySelector('#c');
         console.log(c.innerHTML = "<h1> Hello New h1 Tag </h1>");
     </script>
 </body>
+
 </html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .card {
+            height: 250px;
+            width: 250px;
+            border-radius: 15px;
+        }
+
+        .card-body {
+            border-radius: 15px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 30px auto;
+        }
+
+        .color-btn {
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card border border-2 shadow">
+            <div class="card-body" id="cardBox">
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons" id="btn"></div>
+    <script>
+
+        let color = [
+
+            "yellow",
+            "pink",
+            "blue",
+            "purple",
+            "skyblue",
+            "violet",
+            "cyan",
+            "magenta",
+            "lime",
+            "navy"
+        ];
+
+
+        let card = document.getElementById("cardBox");
+
+        let btn = document.getElementById("btn");
+        let index =0;
+
+        color.forEach((coloritem) => {
+
+            let clrbutton = document.createElement('button');
+            clrbutton.setAttribute('class', 'color-btn');
+            clrbutton.innerText =coloritem;
+            clrbutton.setAttribute("style","background-color:"+coloritem);
+            console.log(clrbutton);
+
+       clrbutton.onclick=()=>{
+        card.setAttribute("style","background-color:"+coloritem);
+       }
+
+           btn.appendChild(clrbutton);
+
+        })
+
+    </script>
+
+</body>
+
+</html>

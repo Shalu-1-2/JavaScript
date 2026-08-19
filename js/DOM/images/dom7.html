@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        #outer>button {
+            height: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <button id="preBtn">Right click</button>
+        <img src="/images/Lighthouse.jpg" alt="" width="500" id="slider">
+        <button id="nextBtn">left click</button>
+    </div>
+
+    <script>
+
+        let sl = document.getElementById('slider');
+        let pBtn = document.getElementById('preBtn');
+        let nBtn = document.getElementById('nextBtn');
+
+        let images = [
+            'Tulips.jpg',
+            'Lighthouse.jpg',
+            'Penguins.jpg'
+        ];
+
+        let index = 0;
+
+        sl.setAttribute('src', images[index]);
+
+        nBtn.onclick = () => {
+
+            index++;
+
+            if (index == images.length) {
+                index = 0;
+            }
+
+            sl.setAttribute('src', images[index]);
+        };
+
+        pBtn.onclick = () => {
+
+            index--;
+
+            if (index < 0) {
+                index = images.length - 1;
+            }
+
+            sl.setAttribute('src', images[index]);
+        };
+
+    </script>
+</body>
+
+</html>

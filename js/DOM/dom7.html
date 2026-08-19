@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="ourter" id="outer">
+        this is outer div .
+
+        <div id="inner">
+            <h1 id="hi"> </h1>
+            <p id="para"></p>
+        </div>
+    </div>
+            <span id="span">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur amet fugiat explicabo provident
+            pariatur corrupti error eligendi cumque beatae sit!</span>
+
+    <script>
+        let outer = document.getElementById('outer');
+        outer.setAttribute('style', 'background-color:green');
+        outer.innerHTML = "<b>Hello Dosto !.</b>";
+
+        outer.innerText = "shalu kushwaha";
+        outer.textContent = "shailendra singh";
+        console.log(outer.getAttribute('id'));
+
+        console.log(outer);
+        let otr = document.createElement('p');
+        console.log(otr);
+        otr.innerText = "this is my para";
+        document.body.appendChild(otr);
+        let heading = document.createElement('h1');
+        heading.innerText = 'this is heading tag';
+        document.body.append(heading);
+        document.body.prepend(heading);
+
+        let span =document.getElementById('span');
+        console.log(span);
+        span.remove();
+
+
+    </script>
+</body>
+
+</html>
