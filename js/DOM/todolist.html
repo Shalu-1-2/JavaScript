@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="text" />
+    <button onclick="Add()">Add</button>
+    <ul id="list"></ul>
+    <script>
+
+            let input = document.getElementById('text'); 
+            let list = document.getElementById('list');
+        function Add() {
+            // console.log(input.value);
+            let li = document.createElement('li');
+            console.log(li);
+            li.innerText = `${input.value}`;
+            list.appendChild(li)
+        }
+    </script>
+</body>
+
+</html>

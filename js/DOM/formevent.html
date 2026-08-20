@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <input type="text" placeholder="Enter Your Name ..." id="name" /><br><br>
+        <p id="nameError"></p>
+
+        <input type="password" placeholder="Enter Your Password ..." id="password" /><br><br>
+        <p id="PassError"></p>
+
+        <input type="email" placeholder="Enter Your email ..." id="email" /><br><br>
+        <p id="emailError"></p>
+
+        <input type="number" placeholder="Enter Your Phone Number ..." id="phone" /><br><br>
+        <p id="numberError"></p>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+
+        let myForm = document.getElementById('myForm');
+        let error = document.getElementById('error');
+        let isError = true;
+        myForm.addEventListener("submit", function (e) {
+
+            e.preventDefault()
+            let name = document.getElementById('name').value;
+            let password = document.getElementById('password').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            if (name == "") {
+
+                document.getElementById('nameError').innerText = "Name is Required"
+                isError = true
+            } else {
+                document.getElementById('nameError').innerText = "";
+                isError = false
+            }
+            if (email == "") {
+
+                document.getElementById('emailError').innerText = "Email is Required"
+                isError = true
+            } else {
+                document.getElementById('emailError').innerText = "";
+                isError = false
+            }
+
+            if (password.length < 6) {
+                document.getElementById('PassError').innerText = "Password must be 6 digit"
+                isError = true
+
+            } else {
+                document.getElementById('PassError').innerText = "";
+                isError = false
+            }
+            if (phone.length < 10) {
+                document.getElementById('numberError').innerText = "Phone number should be 10 digits"
+                isError = true
+
+            } else {
+                document.getElementById('numberError').innerText = "";
+                isError = false
+            }
+
+            if (isError == false) {
+                alert("Form is Submmited");
+            }
+
+            console.log(name);
+            console.log(phone);
+            console.log(email);
+            console.log(password);
+        });
+
+
+    </script>
+
+</body>
+
+</html>

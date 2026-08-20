@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 150px;
+            width: 150px;
+            background-color: red;
+        }
+        .a{
+              height: 200px;
+            width: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+      <div id="a"></div>
+      <br><br>
+      <button onclick="addClass()">Add Class</button>
+      <button onclick="removeClass()">Remove Class</button>
+      <button onclick="toggleClass()">Toggle Class</button>
+
+      <script>
+        let a =document.getElementById('a');
+
+        console.log(a);
+        console.log(a.classList.contains('a'));
+
+        function addClass(){
+            a.classList.add('a')
+            console.log(a.classList.contains('a'));
+        }
+
+        function removeClass(){
+            a.classList.remove('a');
+        }
+        function toggleClass(){
+            a.classList.toggle('a');
+        }
+      </script>
+</body>
+</html>

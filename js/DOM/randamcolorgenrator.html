@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .outer {
+            height: 500px;
+            width: 800px;
+            margin: auto;
+            border: 1px solid;
+        }
+
+        h1 {
+            margin-top: 40px;
+            padding: 10px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .color {
+            height: 200px;
+            width: 200px;
+            border: 1px solid;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        button {
+            height: 40px;
+            width: 100px;
+            background-color: blue;
+            color: white;
+            border: none;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <h1>Randam Color genrator</h1>
+        <div class="color">
+
+        </div>
+        <button>Genrate Color</button>
+
+    </div>
+    <script>
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", function () {
+
+            let h1 = document.querySelector("h1");
+            let randomColor = getRandomColor();
+
+            h1.innerText = randomColor;
+            let color = document.querySelector(".color");
+            color.style.backgroundColor = randomColor;
+            console.log("color updated");
+        });
+
+        function getRandomColor() {
+
+            let red = Math.floor(Math.random() * 256);
+            let green = Math.floor(Math.random() * 256);
+            let blue = Math.floor(Math.random() * 256);
+
+            let color = `rgb(${red}, ${green}, ${blue})`;
+
+            return color;
+        }
+    </script>
+</body>
+
+</html>

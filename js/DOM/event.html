@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" onclick="demo()">Click me</button>
+
+    <script>
+        let button = document.getElementById('btn')
+
+        // button.onclick = function(){
+        //     alert("Hello");
+        // }
+
+        // button.addEventListener('click',function(){
+        //     alert("Hello");
+        // })
+
+        function demo(){
+            alert("Hello");
+        }
+
+        //  button.addEventListener('dblclick',()=>{
+        //     alert("Hello")
+        // })
+
+        button.addEventListener('mouseover',()=>{
+            button.style.backgroundColor = "red";
+        })
+        button.addEventListener('mouseleave',()=>{
+            button.style.backgroundColor = "blue";
+        })
+        document.addEventListener('keydown',()=>{
+            console.log("key down");
+        })
+
+        document.addEventListener('keyup',()=>{
+            console.log("key up !");
+        })
+
+        document.addEventListener("contextmenu",function(e){
+            alert("Right Click");
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>

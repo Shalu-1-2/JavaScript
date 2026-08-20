@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slider{
+            width: 600px;
+            background-color: red;
+            margin: 30px;
+            overflow: hidden;
+        }
+        #track{
+            width: 630px;
+            display: flex;
+            gap: 15px;
+        }
+        #track img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <div id="track">
+
+        </div>
+    </div>
+    <button onclick="prev()">Prev</button>
+    <button onclick="next()">Next</button>
+
+    <script>
+        let track  = document.getElementById('track')
+   
+           let images = [
+            "images/img1.jpg",
+            "images/img2.jpg",
+            "images/img3.jpg",
+            "images/img4.jpg",
+            "images/img1.jpg",
+            "images/img2.jpg",
+            "images/img3.jpg",
+            "images/img4.jpg"
+        ];
+        
+    for(i= 0; i<images.length; i++){
+        let img =  document.createElement('img')
+        img.src = images[i]
+        track.appendChild(img)
+    }
+ 
+    let start = 0 ;
+
+    function next(){
+
+        if(start <images.length - 3){
+            start++;
+            track.style.transform = `translateX(-${start  * 215}px)`;
+        }
+    }
+
+    function prev(){
+
+        if(start > 0){
+            start--;
+            track.style.transform = `translateX(-${start  * 215}px)`;
+        }
+    }
+      
+    </script>
+</body>
+</html>

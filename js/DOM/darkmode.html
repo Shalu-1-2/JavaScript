@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            overflow: hidden;
+        }
+        .outer {
+            height: 100vh;
+            width: 100vw;
+            background-color: white;
+            color: black;
+        }
+
+        .dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <button id="btn"> Dark Mode </button>
+        <h1>this is dark/light mode </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aut itaque ad vel cum, earum possimus
+            autem. Dolorum, autem? Temporibus quasi odit voluptatibus illo repellendus voluptas dolorem aperiam
+            reiciendis nesciunt.</p>
+    </div>
+
+    <script>
+        let btn = document.getElementById('btn');
+        let outer = document.getElementById('outer');
+
+
+        btn.onclick = () => {
+
+            if (btn.innerText == "Dark Mode") {
+                btn.innerText="Light Mode"
+                outer.classList.add('dark');
+
+            } else {
+                btn.innerText="Dark Mode"
+                outer.classList.remove("dark");
+
+            }
+        }
+    </script>
+</body>
+
+</html>
