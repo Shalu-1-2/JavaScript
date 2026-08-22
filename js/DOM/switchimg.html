@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 500px;
+            margin: auto;
+            padding: 30px;
+            background-color: bisque;
+            border-radius: 15px;
+
+        }
+
+        button {
+            margin: 25px;
+            padding: 20px;
+            border-radius: 15px;
+            width: 100px;
+            background-color: blue;
+            border: none;
+            cursor: pointer;
+            color: white;
+
+        }
+
+        .active {
+            background-color: red;
+        }
+
+        #imageId {
+            height: 450px;
+            width: 450px;
+            margin: auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 10px 10 10  0.5 black ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <button onclick="A()" id="a" class="active">A</button>
+        <button onclick="B()" id="b">B</button>
+        <button onclick="C()" id="c">C</button>
+
+         <center> 
+        <img alt="" id="imageId">
+    </center>
+    </div>
+   
+    <script>
+
+        let images = document.getElementById('imageId');
+        let a = document.getElementById('a')
+        let b = document.getElementById('b')
+        let c = document.getElementById('c')
+
+        function A() {
+            images.src = "images/img3.jpg"
+            a.classList.add('active')
+            b.classList.remove('active')
+            c.classList.remove('active')
+
+
+        }
+        function B() {
+            images.src = "images/img1.jpg"
+            b.classList.add('active')
+            a.classList.remove('active')
+            c.classList.remove('active')
+
+        }
+        function C() {
+            images.src = "images/img2.jpg"
+            c.classList.add('active')
+            b.classList.remove('active')
+            a.classList.remove('active')
+        }
+
+
+    </script>
+</body>
+
+</html>

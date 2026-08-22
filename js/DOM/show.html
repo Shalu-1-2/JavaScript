@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 10px;
+            margin: 20px;
+            width: 100px;
+            background-color: blue;
+            color: white;
+
+        }
+        .box{
+            display: none;
+            height: 25px;
+            width: 300px;
+            background-color: gray;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <button onclick="showDetail(1)" id="html">HTML</button>
+        <p id="para1" class="box">HTML is used to create structure</p>
+        <button onclick="showDetail(2)" id="css">CSS</button>
+        <p id="para2" class="box">Css is used to designing.</p>
+
+        <button onclick="showDetail(3)" id="js">JS</button>
+        <p id="para3" class="box">js is used to perform task</p>
+
+    </div>
+    <script>
+        let box = document.querySelectorAll('.box')
+
+        function showDetail(para) {
+            box.forEach((para) => {
+                para.style.display = "none"
+            })
+            document.getElementById("para"+para).style.display = "block"
+        }
+    </script>
+</body>
+
+</html>
